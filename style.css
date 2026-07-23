@@ -1,19 +1,326 @@
-body {font-family: Arial, Helvetica, sans-serif; font-size: 18px; background-color: #dbd2bb; color: #46423d; margin: 40px; padding: 20px;}
+/* Law Enforcement Professional Portfolio */
 
-h1 {color: #954b42; text-align: center; border-bottom: 4px solid #b6a270; padding-bottom: 12px; margin-bottom: 20px;}
+/* General page settings */
 
-h2 {color: #7c745f; margin-top: 20px;}
+html {
+    scroll-behavior: smooth;
+}
 
-h3 {color: #954b42; margin-top: 20px;}
+body {
+    margin: 0;
+    background-color: #f4f5f7;
+    color: #222831;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
 
-p {line-height: 1.7; margin-bottom: 18px;}
+/*
+The div rule is not dead CSS because both HTML pages contain
+opening <div> and closing </div> tags.
+*/
 
-ul {background-color: #b6a270; border: 2px solid #7c745f; padding: 20px 40px; margin-top: 15px; border-radius: 8px;}
+div {
+    box-sizing: border-box;
+}
 
-li {margin-bottom: 10px;}
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: #0b1f3a;
+    line-height: 1.25;
+}
 
-a {color: #954b42; text-decoration: none; font-weight: bold;}
+h1 {
+    margin-bottom: 5px;
+    font-size: 2.4rem;
+}
 
-a:hover {color: #46423d;text-decoration: underline;}
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 3px solid #c5a253;
+    padding-bottom: 10px;
+}
 
-div {width: 300px; height: 100px; background-color: #b6a270; border: 2px solid #7c745f; padding: 20px; margin: 30px auto; color: #46423d; text-align: center; line-height: 60px; font-weight: bold;}
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #0b1f3a;
+}
+
+a:hover {
+    color: #8a6d2f;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+/* Reusable page container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.site-header {
+    background-color: #0b1f3a;
+    color: #ffffff;
+    border-bottom: 5px solid #c5a253;
+    padding: 30px 0 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    color: #ffffff;
+}
+
+.tagline {
+    margin-bottom: 25px;
+    color: #d8dde5;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: #c5a253;
+    color: #0b1f3a;
+}
+
+/* Homepage hero and About page banner */
+
+.hero,
+.page-banner {
+    background-color: #284b63;
+    color: #ffffff;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.hero h2,
+.page-banner h2 {
+    color: #ffffff;
+    border-bottom: none;
+    font-size: 2.5rem;
+}
+
+.hero p,
+.page-banner p {
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-label {
+    margin-bottom: 10px;
+    color: #f0d88b;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Main content sections */
+
+.content-section {
+    padding: 60px 0;
+}
+
+.alternate-section {
+    background-color: #e2e6eb;
+}
+
+/* Cards */
+
+.card-grid,
+.training-grid {
+    display: grid;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.training-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background-color: #ffffff;
+    border-top: 5px solid #284b63;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(11, 31, 58, 0.15);
+    padding: 25px;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* Highlighted information box */
+
+.highlight-box {
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-left: 6px solid #c5a253;
+    box-shadow: 0 3px 8px rgba(11, 31, 58, 0.12);
+    padding: 25px 30px;
+}
+
+.highlight-box ul {
+    padding-left: 25px;
+}
+
+/* Professional quotation */
+
+blockquote {
+    margin: 30px 0 0;
+    background-color: #e2e6eb;
+    border-left: 6px solid #284b63;
+    padding: 25px 30px;
+    color: #0b1f3a;
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+/* Career section */
+
+.career-section {
+    background-color: #182c42;
+    color: #ffffff;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.career-section h2 {
+    color: #ffffff;
+    border-bottom: none;
+}
+
+.career-section p {
+    max-width: 850px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    background-color: #c5a253;
+    border: 2px solid #c5a253;
+    border-radius: 4px;
+    padding: 12px 24px;
+    color: #0b1f3a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #0b1f3a;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #071426;
+    color: #d8dde5;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 17px;
+    }
+
+    .card-grid,
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .page-banner {
+        padding: 55px 0;
+    }
+
+    .hero h2,
+    .page-banner h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navigation a {
+        border-top: 1px solid #415a77;
+    }
+
+    .content-section,
+    .career-section {
+        padding: 45px 0;
+    }
+
+    .card,
+    .highlight-box,
+    blockquote {
+        padding: 20px;
+    }
+}
