@@ -70,7 +70,6 @@ The project documentation is located in the **docs** folder.
 - HTML5
 - CSS3
 - Markdown
-- Git
 - GitHub
 - GitHub Pages
 - Visual Studio Code
